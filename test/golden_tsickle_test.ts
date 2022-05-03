@@ -164,6 +164,7 @@ testFn('golden tests', () => {
         // test suite are only produced for "declaration" tests (tests where
         // test.isDeclarationTest is true).
         addDtsClutzAliases: true,
+        useDeclMergingTransformation: test.isNamespaceTransformationEnabled,
         untyped: test.isUntypedTest,
         provideExternalModuleDtsNamespace: !test.hasShim,
         logWarning: (diag: ts.Diagnostic) => {
